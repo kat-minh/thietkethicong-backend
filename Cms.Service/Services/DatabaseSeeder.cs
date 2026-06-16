@@ -225,6 +225,15 @@ public class DatabaseSeeder : IDatabaseSeeder
             new() { Key = "cta.eyebrow", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Nhãn", Kind = "text", SortOrder = 40, Value = "Bắt đầu dự án" },
             new() { Key = "cta.title", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 41, Value = "Cùng kiến tạo\nkhông gian\nđáng nhớ." },
             new() { Key = "cta.image", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Ảnh nền", Kind = "image", SortOrder = 42, Value = "1600585152220-90363fe7e115" },
+
+            // —— Hồ sơ năng lực (trang portfolio) ——
+            new() { Key = "portfolio.cover.brand", Page = "Hồ sơ năng lực", Label = "Bìa · Thương hiệu", Kind = "text", SortOrder = 1, Value = "BMT Studio" },
+            new() { Key = "portfolio.cover.eyebrow", Page = "Hồ sơ năng lực", Label = "Bìa · Nhãn", Kind = "text", SortOrder = 2, Value = "Hồ sơ năng lực" },
+            new() { Key = "portfolio.cover.title", Page = "Hồ sơ năng lực", Label = "Bìa · Tiêu đề lớn", Kind = "text", SortOrder = 3, Value = "Portfolio" },
+            new() { Key = "portfolio.cover.desc", Page = "Hồ sơ năng lực", Label = "Bìa · Mô tả", Kind = "textarea", SortOrder = 4, Value = "Tuyển tập các công trình thiết kế & thi công đã hoàn thiện." },
+            new() { Key = "portfolio.contents.eyebrow", Page = "Hồ sơ năng lực", Label = "Mục lục · Nhãn", Kind = "text", SortOrder = 5, Value = "Mục lục" },
+            new() { Key = "portfolio.contents.heading", Page = "Hồ sơ năng lực", Label = "Mục lục · Tiêu đề", Kind = "text", SortOrder = 6, Value = "Các chương trong hồ sơ" },
+            new() { Key = "portfolio.contents.hint", Page = "Hồ sơ năng lực", Label = "Mục lục · Ghi chú", Kind = "text", SortOrder = 7, Value = "Chọn một chương để lật xem." },
         };
 
         var missing = items.Where(i => !existing.Contains(i.Key)).ToList();
