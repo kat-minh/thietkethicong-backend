@@ -74,3 +74,21 @@ public class PartnersController : SimpleCrudController<Partner>
 {
     public PartnersController(ISimpleRepository<Partner> r) : base(r) { }
 }
+
+[Route("api/philosophy")]
+public class PhilosophyController : SimpleCrudController<Philosophy>
+{
+    public PhilosophyController(ISimpleRepository<Philosophy> r) : base(r) { }
+}
+
+[Route("api/awards")]
+public class AwardsController : SimpleCrudController<Award>
+{
+    public AwardsController(ISimpleRepository<Award> r) : base(r) { }
+}
+
+[Route("api/certifications")]
+public class CertificationsController : SimpleCrudController<Certification>
+{
+    public CertificationsController(ISimpleRepository<Certification> r) : base(r) { }
+}

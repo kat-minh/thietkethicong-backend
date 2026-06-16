@@ -21,4 +21,10 @@
     <ProjectReference Include="..\Cms.Repository\Cms.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- Reduced fallback snapshots read by DatabaseSeeder on first startup.
+         Use Update (not Include): the Web SDK already includes *.json by default. -->
+    <Content Update="SeedData\**\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

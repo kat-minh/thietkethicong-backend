@@ -56,7 +56,35 @@ public class Partner : IContentEntity
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Name { get; set; } = string.Empty;
-    public string Logo { get; set; } = string.Empty;
-    public string Url { get; set; } = string.Empty;
+    public int SortOrder { get; set; }
+}
+
+/// <summary>Core value shown on /about ("Giá trị cốt lõi").</summary>
+public class Philosophy : IContentEntity
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+    /// <summary>Display number, e.g. "01".</summary>
+    public string No { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
+    public string Body { get; set; } = string.Empty;
+    public int SortOrder { get; set; }
+}
+
+/// <summary>Achievement / impressive number shown on /about ("Năng lực").</summary>
+public class Award : IContentEntity
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+    /// <summary>Headline figure, e.g. "2000+", "10+".</summary>
+    public string Year { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
+    public string Body { get; set; } = string.Empty;
+    public int SortOrder { get; set; }
+}
+
+/// <summary>Commitment / certification line shown on /about ("Cam kết").</summary>
+public class Certification : IContentEntity
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+    public string Text { get; set; } = string.Empty;
     public int SortOrder { get; set; }
 }

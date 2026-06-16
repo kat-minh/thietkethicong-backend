@@ -21,6 +21,9 @@ public class AppDbContext : DbContext
     public DbSet<StatItem> Stats => Set<StatItem>();
     public DbSet<Faq> Faqs => Set<Faq>();
     public DbSet<Partner> Partners => Set<Partner>();
+    public DbSet<Philosophy> Philosophies => Set<Philosophy>();
+    public DbSet<Award> Awards => Set<Award>();
+    public DbSet<Certification> Certifications => Set<Certification>();
     public DbSet<JobPosting> JobPostings => Set<JobPosting>();
     public DbSet<JobApplication> JobApplications => Set<JobApplication>();
 
@@ -68,7 +71,6 @@ public class AppDbContext : DbContext
             entity.Property(s => s.Slug).IsRequired().HasMaxLength(200);
             entity.HasIndex(s => s.Slug).IsUnique();
             entity.Property(s => s.Title).IsRequired().HasMaxLength(200);
-            entity.Property(s => s.Icon).HasMaxLength(100);
             entity.Property(s => s.DetailJson).HasColumnType("jsonb");
         });
 

@@ -1,0 +1,236 @@
+{
+  "stats": [
+    {
+      "value": "10",
+      "suffix": "+",
+      "label": "Năm kinh nghiệm",
+      "sortOrder": 1
+    },
+    {
+      "value": "2000",
+      "suffix": "+",
+      "label": "Dự án hoàn thiện",
+      "sortOrder": 2
+    },
+    {
+      "value": "96",
+      "suffix": "%",
+      "label": "Khách hàng quay lại",
+      "sortOrder": 3
+    },
+    {
+      "value": "3500",
+      "suffix": "m²",
+      "label": "Xưởng sản xuất nội thất",
+      "sortOrder": 4
+    }
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "Tư vấn & khảo sát",
+      "body": "Lắng nghe nhu cầu, khảo sát mặt bằng và thống nhất ngân sách, phong cách.",
+      "duration": "Tuần 1",
+      "sortOrder": 1
+    },
+    {
+      "step": "02",
+      "title": "Thiết kế & 3D",
+      "body": "Concept, mặt bằng, vật liệu và phối cảnh 3D hợp nhất thành một ý tưởng trọn vẹn.",
+      "duration": "Tuần 2–6",
+      "sortOrder": 2
+    },
+    {
+      "step": "03",
+      "title": "Thi công & giám sát",
+      "body": "Đội thi công và xưởng sản xuất triển khai, giám sát chất lượng mỗi ngày theo bản vẽ.",
+      "duration": "Tuần 7–20",
+      "sortOrder": 3
+    },
+    {
+      "step": "04",
+      "title": "Nghiệm thu & bàn giao",
+      "body": "Hoàn thiện, vệ sinh, nghiệm thu cùng khách hàng và bàn giao đúng tiến độ.",
+      "duration": "Tuần cuối",
+      "sortOrder": 4
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Thiết kế tinh tế, thi công chất lượng. Rất hài lòng với dịch vụ của BMT Decor!",
+      "name": "Chủ căn hộ",
+      "role": "Khách hàng tại TP.HCM",
+      "sortOrder": 1
+    },
+    {
+      "quote": "BMT Decor luôn chú trọng từng chi tiết, mang lại không gian hoàn hảo cho quán của tôi.",
+      "name": "Chủ quán café",
+      "role": "Khách hàng tại TP.HCM",
+      "sortOrder": 2
+    },
+    {
+      "quote": "Không gian spa của tôi trở nên sang trọng và thư giãn hơn nhờ BMT Decor.",
+      "name": "Chủ spa thẩm mỹ",
+      "role": "Khách hàng tại TP.HCM",
+      "sortOrder": 3
+    },
+    {
+      "quote": "Dự án hoàn thành đúng tiến độ, chất lượng vượt mong đợi. Cảm ơn BMT Decor!",
+      "name": "Chủ đầu tư",
+      "role": "Khách hàng tại TP.HCM",
+      "sortOrder": 4
+    }
+  ],
+  "team": [
+    {
+      "name": "Đội ngũ Kiến trúc sư",
+      "role": "Thiết kế kiến trúc & nội thất",
+      "photo": "1500648767791-00dcc994a43e",
+      "sortOrder": 1
+    },
+    {
+      "name": "Đội ngũ Thiết kế",
+      "role": "Concept & phối cảnh 3D",
+      "photo": "1494790108377-be9c29b29330",
+      "sortOrder": 2
+    },
+    {
+      "name": "Đội Thi công",
+      "role": "Giám sát & thi công công trình",
+      "photo": "1507003211169-0a1dd7228f2d",
+      "sortOrder": 3
+    },
+    {
+      "name": "Xưởng sản xuất",
+      "role": "Gia công nội thất 3.500m²",
+      "photo": "1472099645785-5658abf4ff4e",
+      "sortOrder": 4
+    }
+  ],
+  "partners": [
+    {
+      "name": "VinCom",
+      "sortOrder": 1
+    },
+    {
+      "name": "Central Mall",
+      "sortOrder": 2
+    },
+    {
+      "name": "Hyundai",
+      "sortOrder": 3
+    },
+    {
+      "name": "Big C",
+      "sortOrder": 4
+    },
+    {
+      "name": "Auchan",
+      "sortOrder": 5
+    },
+    {
+      "name": "Nguyễn Kim",
+      "sortOrder": 6
+    },
+    {
+      "name": "Shinhan Bank",
+      "sortOrder": 7
+    },
+    {
+      "name": "Woori Bank",
+      "sortOrder": 8
+    }
+  ],
+  "faqs": [
+    {
+      "question": "BMT Decor nhận thi công ở đâu?",
+      "answer": "Trụ sở tại TP.HCM với xưởng sản xuất riêng, chúng tôi nhận dự án trên toàn quốc.",
+      "sortOrder": 1
+    },
+    {
+      "question": "BMT Decor thi công những loại công trình nào?",
+      "answer": "Nhà ở, căn hộ, văn phòng, showroom, thẩm mỹ viện, nhà hàng, khách sạn, siêu thị và bảng hiệu.",
+      "sortOrder": 2
+    },
+    {
+      "question": "Có tư vấn thiết kế miễn phí không?",
+      "answer": "Có — buổi tư vấn đầu tiên hoàn toàn miễn phí theo chính sách của BMT Decor.",
+      "sortOrder": 3
+    },
+    {
+      "question": "Có làm theo ngân sách cố định không?",
+      "answer": "Luôn luôn. Chúng tôi thiết kế theo ngân sách của bạn ngay từ đầu và báo giá minh bạch, chi tiết.",
+      "sortOrder": 4
+    }
+  ],
+  "philosophy": [
+    {
+      "no": "01",
+      "title": "Thiết kế chuyên nghiệp",
+      "body": "Tối ưu hóa thời gian, luôn đáp ứng yêu cầu kỹ thuật và đảm bảo đúng tiến độ dự kiến.",
+      "sortOrder": 1
+    },
+    {
+      "no": "02",
+      "title": "Thi công đúng bản vẽ",
+      "body": "Chất lượng công trình và vật tư được kiểm duyệt chặt chẽ bởi giám sát của BMT Decor và chủ đầu tư.",
+      "sortOrder": 2
+    },
+    {
+      "no": "03",
+      "title": "Xưởng sản xuất 3.500m²",
+      "body": "Chủ động gia công nội thất bởi đội ngũ thợ lành nghề, duyệt trực tiếp từ thiết kế đến sản phẩm.",
+      "sortOrder": 3
+    },
+    {
+      "no": "04",
+      "title": "Đồng hành dài lâu",
+      "body": "Bàn giao hoàn thiện, chỉn chu — tạo nền tảng vững chắc cho hành trình kinh doanh của bạn.",
+      "sortOrder": 4
+    }
+  ],
+  "awards": [
+    {
+      "year": "2000+",
+      "title": "Dự án đã hoàn thiện",
+      "body": "Trên khắp cả nước",
+      "sortOrder": 1
+    },
+    {
+      "year": "10+",
+      "title": "Năm kinh nghiệm",
+      "body": "Trong lĩnh vực thiết kế – thi công",
+      "sortOrder": 2
+    },
+    {
+      "year": "3.500m²",
+      "title": "Xưởng sản xuất",
+      "body": "Gia công nội thất nội bộ",
+      "sortOrder": 3
+    },
+    {
+      "year": "24/7",
+      "title": "Hỗ trợ tư vấn",
+      "body": "Đồng hành cùng khách hàng",
+      "sortOrder": 4
+    }
+  ],
+  "certifications": [
+    {
+      "text": "Thiết kế – thi công trọn gói",
+      "sortOrder": 1
+    },
+    {
+      "text": "Xưởng sản xuất nội thất riêng",
+      "sortOrder": 2
+    },
+    {
+      "text": "Giám sát chất lượng QA/QC",
+      "sortOrder": 3
+    },
+    {
+      "text": "Bảo hành công trình",
+      "sortOrder": 4
+    }
+  ]
+}

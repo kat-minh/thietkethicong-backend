@@ -11,7 +11,6 @@ public class ServiceItem
     public string Short { get; set; } = string.Empty;
     public string Summary { get; set; } = string.Empty;
     public string Image { get; set; } = string.Empty;
-    public string? Icon { get; set; }
 
     /// <summary>Links to a Project.Category for "related projects" on the detail page.</summary>
     public string? ProjectCategory { get; set; }

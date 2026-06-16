@@ -30,7 +30,7 @@ public record ServicePackageDto(string Name, string Price, List<string> Features
 public record ServiceFaqDto(string Q, string A);
 
 public record ServiceResponse(
-    Guid Id, string Slug, string Title, string Short, string Summary, string Image, string? Icon,
+    Guid Id, string Slug, string Title, string Short, string Summary, string Image,
     string? ProjectCategory, int SortOrder,
     List<string> Capabilities, List<ServiceProcessStepDto> Process,
     List<ServiceNamedNoteDto> Styles, List<ServiceNamedNoteDto> Materials,
@@ -43,7 +43,6 @@ public class ServiceMutationRequest
     public string Short { get; set; } = string.Empty;
     public string Summary { get; set; } = string.Empty;
     public string Image { get; set; } = string.Empty;
-    public string? Icon { get; set; }
     public string? ProjectCategory { get; set; }
     public int SortOrder { get; set; }
     public List<string> Capabilities { get; set; } = new();

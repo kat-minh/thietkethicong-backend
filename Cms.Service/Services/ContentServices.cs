@@ -142,7 +142,6 @@ public class ServiceItemService : IServiceItemService
         item.Short = r.Short;
         item.Summary = r.Summary;
         item.Image = r.Image.Trim();
-        item.Icon = r.Icon;
         item.ProjectCategory = r.ProjectCategory;
         item.SortOrder = r.SortOrder;
 
@@ -165,7 +164,7 @@ public class ServiceItemService : IServiceItemService
         catch { detail = new(); }
 
         return new ServiceResponse(
-            s.Id, s.Slug, s.Title, s.Short, s.Summary, s.Image, s.Icon, s.ProjectCategory, s.SortOrder,
+            s.Id, s.Slug, s.Title, s.Short, s.Summary, s.Image, s.ProjectCategory, s.SortOrder,
             detail.Capabilities, detail.Process, detail.Styles, detail.Materials, detail.Packages, detail.Faqs,
             s.UpdatedAt);
     }
