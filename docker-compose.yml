@@ -1,0 +1,53 @@
+services:
+  postgres_db:
+    image: postgres:16-alpine
+    container_name: cms_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: cms_user
+      POSTGRES_PASSWORD: cms_password
+      POSTGRES_DB: cms_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cms_user -d cms_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - cms_network
+
+  webapi:
+    build:
+      # Build context is the repo root; Dockerfile lives in .docker/
+      context: .
+      dockerfile: .docker/Dockerfile
+    container_name: cms_webapi
+    restart: unless-stopped
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "http://+:8080"
+      # Overrides ConnectionStrings:DefaultConnection from appsettings.json.
+      # Host must match the postgres service name on the Docker network.
+      ConnectionStrings__DefaultConnection: "Host=postgres_db;Port=5432;Database=cms_db;Username=cms_user;Password=cms_password"
+      Jwt__Key: "ThisIsASuperSecretKeyForBmtCmsChangeMeInProduction1234567890"
+      Jwt__Issuer: "CmsApi"
+      Jwt__Audience: "CmsClient"
+      Jwt__ExpiryMinutes: "120"
+    ports:
+      # Host 5080 -> container 8080. Your Next.js app calls http://localhost:5080
+      - "5080:8080"
+    networks:
+      - cms_network
+
+volumes:
+  postgres_data:
+
+networks:
+  cms_network:
+    driver: bridge

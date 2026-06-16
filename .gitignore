@@ -1,0 +1,29 @@
+## .NET build output
+bin/
+obj/
+out/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.user
+*.suo
+
+## Rider / VS
+.idea/
+.vs/
+*.DotSettings.user
+
+## Test results
+[Tt]est[Rr]esult*/
+*.trx
+
+## Environment / secrets
+*.env
+.env
+appsettings.*.Local.json
+secrets.json
+
+## OS
+.DS_Store
+Thumbs.db
