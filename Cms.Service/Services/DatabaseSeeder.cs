@@ -29,6 +29,7 @@ public class DatabaseSeeder : IDatabaseSeeder
     private readonly ISimpleRepository<Philosophy> _philosophy;
     private readonly ISimpleRepository<Award> _awards;
     private readonly ISimpleRepository<Certification> _certifications;
+    private readonly ISimpleRepository<JobPosting> _jobs;
     private readonly IPageContentRepository _pageContent;
 
     public DatabaseSeeder(
@@ -46,6 +47,7 @@ public class DatabaseSeeder : IDatabaseSeeder
         ISimpleRepository<Philosophy> philosophy,
         ISimpleRepository<Award> awards,
         ISimpleRepository<Certification> certifications,
+        ISimpleRepository<JobPosting> jobs,
         IPageContentRepository pageContent)
     {
         _users = users;
@@ -62,6 +64,7 @@ public class DatabaseSeeder : IDatabaseSeeder
         _philosophy = philosophy;
         _awards = awards;
         _certifications = certifications;
+        _jobs = jobs;
         _pageContent = pageContent;
     }
 
@@ -89,7 +92,20 @@ public class DatabaseSeeder : IDatabaseSeeder
         await SeedServicesAsync();
         await SeedSettingsAsync();
         await SeedStudioAsync();
+        await SeedJobsAsync();
         await SeedPageContentAsync();
+    }
+
+    private async Task SeedJobsAsync()
+    {
+        if ((await _jobs.GetAllAsync()).Count > 0) return;
+        var data = ReadSeed<List<JobPosting>>("jobs.json");
+        if (data is null) return;
+        foreach (var j in data)
+        {
+            j.Id = Guid.NewGuid();
+            await _jobs.AddAsync(j);
+        }
     }
 
     private async Task SeedPageContentAsync()
@@ -168,6 +184,29 @@ public class DatabaseSeeder : IDatabaseSeeder
             // is hidden from the generic page-content editor).
             new() { Key = "estimator.config", Page = "Báo giá", Label = "Bảng đơn giá ước tính", Kind = "json", SortOrder = 2,
                 Value = @"{""propertyTypes"":[{""id"":""apartment"",""label"":""Căn hộ"",""mult"":1.0},{""id"":""townhouse"",""label"":""Nhà phố"",""mult"":1.1},{""id"":""villa"",""label"":""Biệt thự"",""mult"":1.25},{""id"":""office"",""label"":""Văn phòng"",""mult"":1.05},{""id"":""fnb"",""label"":""Café / Nhà hàng"",""mult"":1.35},{""id"":""retail"",""label"":""Showroom / Cửa hàng"",""mult"":1.2}],""packages"":[{""id"":""design"",""label"":""Chỉ thiết kế"",""rate"":350000,""blurb"":""Từ concept đến bản vẽ thi công.""},{""id"":""refresh"",""label"":""Cải tạo — Làm mới"",""rate"":3500000,""blurb"":""Nâng cấp & trang trí cơ bản.""},{""id"":""essential"",""label"":""Trọn gói — Tiêu chuẩn"",""rate"":8000000,""blurb"":""Hoàn thiện tiêu chuẩn, nội thất cơ bản.""},{""id"":""signature"",""label"":""Trọn gói — Cao cấp"",""rate"":13000000,""blurb"":""Thiết kế riêng, vật liệu cao cấp.""},{""id"":""atelier"",""label"":""Trọn gói — Đặc tuyển"",""rate"":20000000,""blurb"":""Sang trọng, may đo hoàn toàn.""}]}" },
+            // —— Dịch vụ (trang list) ——
+            new() { Key = "services.hero.eyebrow", Page = "Dịch vụ", Label = "Hero · Nhãn", Kind = "text", SortOrder = 1, Value = "Dịch vụ của chúng tôi" },
+            new() { Key = "services.hero.title", Page = "Dịch vụ", Label = "Hero · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 2, Value = "Một đơn vị,\ntrọn vẹn\nhành trình." },
+            new() { Key = "services.hero.intro", Page = "Dịch vụ", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 3, Value = "Bạn có thể chọn riêng một hạng mục hoặc trọn gói thiết kế – thi công. Phần lớn khách hàng chọn trọn gói: thiết kế và thi công cùng một đội ngũ, một ngân sách, một đầu mối chịu trách nhiệm." },
+
+            // —— Dự án (trang list) ——
+            new() { Key = "projects.hero.eyebrow", Page = "Dự án", Label = "Hero · Nhãn", Kind = "text", SortOrder = 1, Value = "Dự án tiêu biểu" },
+            new() { Key = "projects.hero.title", Page = "Dự án", Label = "Hero · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 2, Value = "Mỗi dự án\nlà một không gian\nđược kiến tạo." },
+
+            // —— Tin tức (trang list) ——
+            new() { Key = "blog.hero.eyebrow", Page = "Tin tức", Label = "Hero · Nhãn", Kind = "text", SortOrder = 1, Value = "Tin tức" },
+            new() { Key = "blog.hero.title", Page = "Tin tức", Label = "Hero · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 2, Value = "Tin tức\n& tuyển dụng." },
+
+            // —— Tuyển dụng (trang list) ——
+            new() { Key = "careers.hero.eyebrow", Page = "Tuyển dụng", Label = "Hero · Nhãn", Kind = "text", SortOrder = 1, Value = "Tuyển dụng" },
+            new() { Key = "careers.hero.title", Page = "Tuyển dụng", Label = "Hero · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 2, Value = "Gia nhập\nđội ngũ BMT Decor" },
+            new() { Key = "careers.hero.intro", Page = "Tuyển dụng", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 3, Value = "Chúng tôi luôn tìm kiếm những con người tài năng, tận tâm để cùng kiến tạo những không gian đáng nhớ. Khám phá các vị trí đang mở bên dưới." },
+            new() { Key = "careers.hero.image", Page = "Tuyển dụng", Label = "Hero · Ảnh", Kind = "image", SortOrder = 4, Value = "1497215728101-856f4ea42174" },
+
+            // —— Khối kêu gọi (CTA) dùng chung, hiện trong hub Trang chủ ——
+            new() { Key = "cta.eyebrow", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Nhãn", Kind = "text", SortOrder = 40, Value = "Bắt đầu dự án" },
+            new() { Key = "cta.title", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 41, Value = "Cùng kiến tạo\nkhông gian\nđáng nhớ." },
+            new() { Key = "cta.image", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Ảnh nền", Kind = "image", SortOrder = 42, Value = "1600585152220-90363fe7e115" },
         };
 
         var missing = items.Where(i => !existing.Contains(i.Key)).ToList();

@@ -1,0 +1,35 @@
+[
+  {
+    "title": "[Mẫu] Thực Tập Sinh Marketing",
+    "department": "Marketing",
+    "location": "TP.HCM",
+    "employmentType": "Thực tập",
+    "salary": "3.000.000đ + thưởng",
+    "excerpt": "Chăm sóc và phát triển các kênh social media (TikTok, Facebook, YouTube) và nội dung website của BMT Decor.",
+    "descriptionHtml": "<h3>Mô tả công việc</h3><ul><li>Chăm sóc, phát triển các kênh social media của BMT.</li><li>Lên ý tưởng, kịch bản nội dung – hình ảnh – video.</li><li>Nghiên cứu, thu thập tài nguyên.</li></ul><h3>Quyền lợi</h3><ul><li>Phụ cấp 3tr/tháng + thưởng hiệu suất.</li><li>Đào tạo Photoshop, Canva, CapCut, ứng dụng AI.</li><li>Môi trường trẻ trung, năng động.</li></ul>",
+    "isOpen": true,
+    "sortOrder": 1
+  },
+  {
+    "title": "[Mẫu] Thực Tập Sinh Thiết kế Nội/Ngoại thất",
+    "department": "Thiết kế",
+    "location": "TP.HCM",
+    "employmentType": "Thực tập",
+    "salary": "Thoả thuận",
+    "excerpt": "Hỗ trợ dựng concept, phối cảnh 3D và triển khai bản vẽ kỹ thuật cùng đội ngũ thiết kế.",
+    "descriptionHtml": "<h3>Mô tả công việc</h3><ul><li>Hỗ trợ dựng concept và phối cảnh 3D.</li><li>Triển khai bản vẽ kỹ thuật.</li><li>Phối hợp cùng đội thi công.</li></ul><h3>Yêu cầu</h3><ul><li>Sinh viên năm 3–4 ngành Thiết kế nội thất / Kiến trúc.</li><li>Sử dụng được 3ds Max, SketchUp, AutoCAD.</li></ul>",
+    "isOpen": true,
+    "sortOrder": 2
+  },
+  {
+    "title": "[Mẫu] Nhân viên Kinh doanh dự án",
+    "department": "Kinh doanh",
+    "location": "TP.HCM",
+    "employmentType": "Toàn thời gian",
+    "salary": "Lương cứng + hoa hồng",
+    "excerpt": "Tư vấn, chăm sóc khách hàng và phát triển hợp đồng thiết kế – thi công nội thất.",
+    "descriptionHtml": "<h3>Mô tả công việc</h3><ul><li>Tư vấn giải pháp thiết kế – thi công cho khách hàng.</li><li>Chăm sóc khách hàng, theo dõi hợp đồng.</li><li>Phát triển khách hàng mới.</li></ul><h3>Quyền lợi</h3><ul><li>Lương cứng + hoa hồng hấp dẫn.</li><li>Đào tạo bài bản, lộ trình thăng tiến rõ ràng.</li></ul>",
+    "isOpen": true,
+    "sortOrder": 3
+  }
+]
