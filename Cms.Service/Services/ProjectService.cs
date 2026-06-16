@@ -19,7 +19,7 @@ public class ProjectService : IProjectService
     {
         var projects = await _repo.GetAllAsync();
         return projects.Select(p => new ProjectListItem(
-            p.Id, p.Slug, p.Title, p.Category, p.Location, p.Year, p.Cover, p.Featured, p.UpdatedAt)).ToList();
+            p.Id, p.Slug, p.Title, p.Category, p.Location, p.Year, p.Cover, p.Gallery, p.Featured, p.UpdatedAt)).ToList();
     }
 
     public async Task<ProjectResponse?> GetBySlugAsync(string slug)

@@ -94,7 +94,9 @@ public class DatabaseSeeder : IDatabaseSeeder
 
     private async Task SeedPageContentAsync()
     {
-        if (await _pageContent.CountAsync() > 0) return;
+        // Additive: only insert keys that don't exist yet, so new keys ship to
+        // already-seeded databases without wiping admin edits to existing ones.
+        var existing = (await _pageContent.GetAllAsync()).Select(p => p.Key).ToHashSet();
         var items = new List<PageContent>
         {
             // —— Trang chủ ——
@@ -122,8 +124,18 @@ public class DatabaseSeeder : IDatabaseSeeder
                 Value = "Chúng tôi đo lường thành công không bằng mét vuông hay giải thưởng, mà bằng những khoảnh khắc thường ngày mà không gian tạo ra — ly cà phê sáng trong ánh sáng đẹp, bữa tối kéo dài, và căn nhà vẫn vẹn nguyên cảm xúc sau nhiều năm." },
             new() { Key = "about.vision.image", Page = "Giới thiệu", Label = "Tầm nhìn · Ảnh", Kind = "image", SortOrder = 9,
                 Value = "1600585152220-90363fe7e115" },
+
+            // —— Liên hệ ——
+            new() { Key = "contact.hero.intro", Page = "Liên hệ", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 1,
+                Value = "Hãy chia sẻ về không gian và mong muốn của bạn. Buổi tư vấn đầu tiên luôn miễn phí — và thường là khởi đầu của một công trình đáng nhớ." },
+
+            // —— Báo giá ——
+            new() { Key = "estimator.hero.intro", Page = "Báo giá", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 1,
+                Value = "Bốn câu hỏi nhanh để có khoảng giá thực tế — sau đó để lại thông tin để nhận báo giá chi tiết theo từng hạng mục cho dự án của bạn." },
         };
-        await _pageContent.AddRangeAsync(items);
+
+        var missing = items.Where(i => !existing.Contains(i.Key)).ToList();
+        if (missing.Count > 0) await _pageContent.AddRangeAsync(missing);
     }
 
     private async Task SeedProjectsAsync()

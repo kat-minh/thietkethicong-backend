@@ -17,6 +17,7 @@ public record ProjectListItem(
     string Location,
     int Year,
     string Cover,
+    List<string> Gallery,
     bool Featured,
     DateTime UpdatedAt);
 
