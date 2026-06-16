@@ -21,6 +21,8 @@ public class AppDbContext : DbContext
     public DbSet<StatItem> Stats => Set<StatItem>();
     public DbSet<Faq> Faqs => Set<Faq>();
     public DbSet<Partner> Partners => Set<Partner>();
+    public DbSet<JobPosting> JobPostings => Set<JobPosting>();
+    public DbSet<JobApplication> JobApplications => Set<JobApplication>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -88,6 +90,26 @@ public class AppDbContext : DbContext
             entity.Property(m => m.Email).IsRequired().HasMaxLength(256);
             entity.Property(m => m.Phone).HasMaxLength(50);
             entity.Property(m => m.Subject).HasMaxLength(200);
+        });
+
+        modelBuilder.Entity<JobPosting>(entity =>
+        {
+            entity.HasKey(j => j.Id);
+            entity.Property(j => j.Title).IsRequired().HasMaxLength(200);
+            entity.Property(j => j.Department).HasMaxLength(100);
+            entity.Property(j => j.Location).HasMaxLength(150);
+            entity.Property(j => j.EmploymentType).HasMaxLength(100);
+            entity.Property(j => j.Salary).HasMaxLength(100);
+        });
+
+        modelBuilder.Entity<JobApplication>(entity =>
+        {
+            entity.HasKey(a => a.Id);
+            entity.Property(a => a.Name).IsRequired().HasMaxLength(150);
+            entity.Property(a => a.Phone).HasMaxLength(50);
+            entity.Property(a => a.Email).HasMaxLength(256);
+            entity.Property(a => a.Position).HasMaxLength(200);
+            entity.Property(a => a.CvUrl).HasMaxLength(1000);
         });
     }
 }
