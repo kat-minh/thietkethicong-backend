@@ -108,6 +108,8 @@ public class ServiceItemService : IServiceItemService
         var now = DateTime.UtcNow;
         var item = new ServiceItem { Id = Guid.NewGuid(), CreatedAt = now, UpdatedAt = now };
         Apply(item, r, slug);
+        if (item.SortOrder <= 0)
+            item.SortOrder = (await _repo.GetAllAsync()).Select(s => s.SortOrder).DefaultIfEmpty(0).Max() + 1;
         await _repo.AddAsync(item);
         return ToResponse(item);
     }

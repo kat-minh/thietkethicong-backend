@@ -21,6 +21,9 @@ public abstract class SimpleCrudController<T> : ControllerBase where T : class, 
     public async Task<IActionResult> Create([FromBody] T input)
     {
         if (input.Id == Guid.Empty) input.Id = Guid.NewGuid();
+        // No manual ordering field in the UI: new items append to the end.
+        if (input.SortOrder <= 0)
+            input.SortOrder = (await Repo.GetAllAsync()).Select(e => e.SortOrder).DefaultIfEmpty(0).Max() + 1;
         await Repo.AddAsync(input);
         return Ok(input);
     }
