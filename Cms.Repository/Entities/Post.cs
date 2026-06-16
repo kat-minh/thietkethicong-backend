@@ -21,6 +21,9 @@ public class Post
 
     public List<string> Tags { get; set; } = new();
 
+    /// <summary>Marks the hero/featured article shown at the top of the blog.</summary>
+    public bool Featured { get; set; }
+
     /// <summary>"draft" or "published".</summary>
     public string Status { get; set; } = "draft";
     public DateTime? PublishedAt { get; set; }

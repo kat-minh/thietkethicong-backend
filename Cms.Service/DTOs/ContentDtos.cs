@@ -2,12 +2,12 @@ namespace Cms.Service.DTOs;
 
 // ---------------- Posts ----------------
 public record PostListItem(
-    Guid Id, string Slug, string Title, string Excerpt, string Category, string Status, DateTime? PublishedAt, string CoverImage, DateTime UpdatedAt);
+    Guid Id, string Slug, string Title, string Excerpt, string Category, string Status, DateTime? PublishedAt, string CoverImage, bool Featured, DateTime UpdatedAt);
 
 public record PostResponse(
     Guid Id, string Slug, string Title, string Excerpt, string CoverImage, string BodyHtml,
     List<string> Tags, string Category, string Author, string ReadingTime,
-    string Status, DateTime? PublishedAt, DateTime CreatedAt, DateTime UpdatedAt);
+    string Status, DateTime? PublishedAt, bool Featured, DateTime CreatedAt, DateTime UpdatedAt);
 
 public class PostMutationRequest
 {
@@ -21,6 +21,7 @@ public class PostMutationRequest
     public string Author { get; set; } = string.Empty;
     public string ReadingTime { get; set; } = string.Empty;
     public string Status { get; set; } = "draft";
+    public bool Featured { get; set; }
 }
 
 // ---------------- Services ----------------

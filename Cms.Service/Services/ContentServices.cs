@@ -70,6 +70,7 @@ public class PostService : IPostService
         post.Category = r.Category.Trim();
         post.Author = r.Author.Trim();
         post.ReadingTime = r.ReadingTime.Trim();
+        post.Featured = r.Featured;
         post.Status = r.Status == "published" ? "published" : "draft";
         if (post.Status == "published" && post.PublishedAt is null)
             post.PublishedAt = DateTime.UtcNow;
@@ -78,11 +79,11 @@ public class PostService : IPostService
     }
 
     private static PostListItem ToListItem(Post p) =>
-        new(p.Id, p.Slug, p.Title, p.Excerpt, p.Category, p.Status, p.PublishedAt, p.CoverImage, p.UpdatedAt);
+        new(p.Id, p.Slug, p.Title, p.Excerpt, p.Category, p.Status, p.PublishedAt, p.CoverImage, p.Featured, p.UpdatedAt);
 
     private static PostResponse ToResponse(Post p) =>
         new(p.Id, p.Slug, p.Title, p.Excerpt, p.CoverImage, p.BodyHtml, p.Tags,
-            p.Category, p.Author, p.ReadingTime, p.Status, p.PublishedAt, p.CreatedAt, p.UpdatedAt);
+            p.Category, p.Author, p.ReadingTime, p.Status, p.PublishedAt, p.Featured, p.CreatedAt, p.UpdatedAt);
 }
 
 public class ServiceItemService : IServiceItemService
