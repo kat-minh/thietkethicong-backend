@@ -227,13 +227,13 @@ public class DatabaseSeeder : IDatabaseSeeder
             Name = "BMT DECOR",
             LegalName = "CÔNG TY TNHH TMDV BMT DECOR",
             Tagline = "Thiết kế · Thi công · Nội thất trọn gói",
-            Description = "BMT Decor là đơn vị thiết kế và thi công nội thất tại TP.HCM.",
+            Manifesto = "Chúng tôi không chỉ xây dựng không gian — chúng tôi kiến tạo trải nghiệm.",
+            Description = "BMT Decor là đơn vị thiết kế và thi công nội thất tại TP.HCM, mang đến giải pháp trọn gói cho nhà ở và công trình thương mại với hơn 2000+ dự án đã hoàn thiện.",
             Phone = "0934888881",
             Email = "bmt.decor@thietkethicong.vn",
             TaxId = "0317552987",
-            Facebook = "https://facebook.com",
-            Zalo = "https://zalo.me/1255459439490998198",
-            OfficesJson = "[{\"label\":\"Cơ sở 1\",\"address\":\"380 Vũ Huy Tấn, P.15, Bình Thạnh, TP.HCM\"},{\"label\":\"Cơ sở 2\",\"address\":\"58 Thành Thái, P.12, Quận 10, TP.HCM\"}]",
+            OfficesJson = "[{\"label\":\"Cơ sở 1\",\"address\":\"380 Vũ Huy Tấn, Phường 15, Quận Bình Thạnh, TP.HCM\"},{\"label\":\"Cơ sở 2\",\"address\":\"58 Thành Thái, Phường 12, Quận 10, TP.HCM\"},{\"label\":\"Xưởng sản xuất\",\"address\":\"Nguyễn Thị Tú, P. Bình Hưng Hòa B, Bình Tân, TP.HCM\"}]",
+            SocialJson = "[{\"label\":\"Facebook\",\"href\":\"https://facebook.com\"},{\"label\":\"Zalo\",\"href\":\"https://zalo.me/1255459439490998198\"}]",
             UpdatedAt = DateTime.UtcNow,
         });
     }

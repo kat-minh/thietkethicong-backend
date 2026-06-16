@@ -71,18 +71,24 @@ public class Office
     public string Address { get; set; } = string.Empty;
 }
 
+public class SocialLink
+{
+    public string Label { get; set; } = string.Empty;
+    public string Href { get; set; } = string.Empty;
+}
+
 public class SiteSettingDto
 {
     public string Name { get; set; } = string.Empty;
     public string LegalName { get; set; } = string.Empty;
     public string Tagline { get; set; } = string.Empty;
+    public string Manifesto { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public string Phone { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     public string TaxId { get; set; } = string.Empty;
-    public string Facebook { get; set; } = string.Empty;
-    public string Zalo { get; set; } = string.Empty;
     public List<Office> Offices { get; set; } = new();
+    public List<SocialLink> Social { get; set; } = new();
 }
 
 // ---------------- Contact messages ----------------

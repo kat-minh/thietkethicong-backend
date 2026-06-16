@@ -191,13 +191,13 @@ public class SiteSettingService : ISiteSettingService
         entity.Name = dto.Name;
         entity.LegalName = dto.LegalName;
         entity.Tagline = dto.Tagline;
+        entity.Manifesto = dto.Manifesto;
         entity.Description = dto.Description;
         entity.Phone = dto.Phone;
         entity.Email = dto.Email;
         entity.TaxId = dto.TaxId;
-        entity.Facebook = dto.Facebook;
-        entity.Zalo = dto.Zalo;
         entity.OfficesJson = JsonSerializer.Serialize(dto.Offices ?? new(), JsonOpts);
+        entity.SocialJson = JsonSerializer.Serialize(dto.Social ?? new(), JsonOpts);
         entity.UpdatedAt = DateTime.UtcNow;
 
         await _repo.UpsertAsync(entity);
@@ -210,18 +210,22 @@ public class SiteSettingService : ISiteSettingService
         try { offices = JsonSerializer.Deserialize<List<Office>>(s.OfficesJson, JsonOpts) ?? new(); }
         catch { offices = new(); }
 
+        List<SocialLink> social;
+        try { social = JsonSerializer.Deserialize<List<SocialLink>>(s.SocialJson, JsonOpts) ?? new(); }
+        catch { social = new(); }
+
         return new SiteSettingDto
         {
             Name = s.Name,
             LegalName = s.LegalName,
             Tagline = s.Tagline,
+            Manifesto = s.Manifesto,
             Description = s.Description,
             Phone = s.Phone,
             Email = s.Email,
             TaxId = s.TaxId,
-            Facebook = s.Facebook,
-            Zalo = s.Zalo,
             Offices = offices,
+            Social = social,
         };
     }
 }

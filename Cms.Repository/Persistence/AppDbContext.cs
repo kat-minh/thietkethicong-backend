@@ -83,6 +83,7 @@ public class AppDbContext : DbContext
             entity.Property(s => s.Email).HasMaxLength(256);
             entity.Property(s => s.TaxId).HasMaxLength(50);
             entity.Property(s => s.OfficesJson).HasColumnType("jsonb");
+            entity.Property(s => s.SocialJson).HasColumnType("jsonb");
         });
 
         modelBuilder.Entity<ContactMessage>(entity =>
