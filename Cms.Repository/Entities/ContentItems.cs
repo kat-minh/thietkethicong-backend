@@ -88,3 +88,19 @@ public class Certification : IContentEntity
     public string Text { get; set; } = string.Empty;
     public int SortOrder { get; set; }
 }
+
+/// <summary>
+/// "Hồ sơ năng lực" album — managed independently of Projects (its own photo set).
+/// Shown on /ho-so-nang-luc, grouped by Category into chapters.
+/// </summary>
+public class Album : IContentEntity
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+    public string Slug { get; set; } = string.Empty;
+    public string Title { get; set; } = string.Empty;
+    public string Category { get; set; } = string.Empty;
+    public string Cover { get; set; } = string.Empty;
+    /// <summary>Album photo set (Postgres text[]).</summary>
+    public List<string> Images { get; set; } = new();
+    public int SortOrder { get; set; }
+}

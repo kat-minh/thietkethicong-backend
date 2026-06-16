@@ -30,6 +30,7 @@ public class DatabaseSeeder : IDatabaseSeeder
     private readonly ISimpleRepository<Award> _awards;
     private readonly ISimpleRepository<Certification> _certifications;
     private readonly ISimpleRepository<JobPosting> _jobs;
+    private readonly ISimpleRepository<Album> _albums;
     private readonly IPageContentRepository _pageContent;
 
     public DatabaseSeeder(
@@ -48,6 +49,7 @@ public class DatabaseSeeder : IDatabaseSeeder
         ISimpleRepository<Award> awards,
         ISimpleRepository<Certification> certifications,
         ISimpleRepository<JobPosting> jobs,
+        ISimpleRepository<Album> albums,
         IPageContentRepository pageContent)
     {
         _users = users;
@@ -65,6 +67,7 @@ public class DatabaseSeeder : IDatabaseSeeder
         _awards = awards;
         _certifications = certifications;
         _jobs = jobs;
+        _albums = albums;
         _pageContent = pageContent;
     }
 
@@ -93,7 +96,22 @@ public class DatabaseSeeder : IDatabaseSeeder
         await SeedSettingsAsync();
         await SeedStudioAsync();
         await SeedJobsAsync();
+        await SeedAlbumsAsync();
         await SeedPageContentAsync();
+    }
+
+    private async Task SeedAlbumsAsync()
+    {
+        if ((await _albums.GetAllAsync()).Count > 0) return;
+        var data = ReadSeed<List<Album>>("albums.json");
+        if (data is null) return;
+        var seen = new HashSet<string>();
+        foreach (var a in data)
+        {
+            if (string.IsNullOrWhiteSpace(a.Slug) || !seen.Add(a.Slug)) continue;
+            a.Id = Guid.NewGuid();
+            await _albums.AddAsync(a);
+        }
     }
 
     private async Task SeedJobsAsync()

@@ -93,6 +93,12 @@ public class CertificationsController : SimpleCrudController<Certification>
     public CertificationsController(ISimpleRepository<Certification> r) : base(r) { }
 }
 
+[Route("api/albums")]
+public class AlbumsController : SimpleCrudController<Album>
+{
+    public AlbumsController(ISimpleRepository<Album> r) : base(r) { }
+}
+
 /// <summary>Editable page copy/images (key→value). GET public, bulk PUT admin.</summary>
 [ApiController]
 [Route("api/page-content")]

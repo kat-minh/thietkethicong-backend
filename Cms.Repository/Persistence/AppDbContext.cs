@@ -24,6 +24,7 @@ public class AppDbContext : DbContext
     public DbSet<Philosophy> Philosophies => Set<Philosophy>();
     public DbSet<Award> Awards => Set<Award>();
     public DbSet<Certification> Certifications => Set<Certification>();
+    public DbSet<Album> Albums => Set<Album>();
     public DbSet<PageContent> PageContents => Set<PageContent>();
     public DbSet<JobPosting> JobPostings => Set<JobPosting>();
     public DbSet<JobApplication> JobApplications => Set<JobApplication>();
@@ -111,6 +112,14 @@ public class AppDbContext : DbContext
             entity.HasKey(p => p.Id);
             entity.Property(p => p.Key).IsRequired().HasMaxLength(120);
             entity.HasIndex(p => p.Key).IsUnique();
+        });
+
+        modelBuilder.Entity<Album>(entity =>
+        {
+            entity.HasKey(a => a.Id);
+            entity.Property(a => a.Slug).IsRequired().HasMaxLength(200);
+            entity.HasIndex(a => a.Slug).IsUnique();
+            entity.Property(a => a.Title).IsRequired().HasMaxLength(300);
         });
 
         modelBuilder.Entity<JobApplication>(entity =>
