@@ -154,7 +154,6 @@ public class DatabaseSeeder : IDatabaseSeeder
             Excerpt = "Những phong cách nội thất dẫn đầu năm 2024.",
             CoverImage = "https://thietkethicong.vn/wp-content/uploads/2024/08/IMG_4015.jpg",
             BodyHtml = "<p>Nội dung bài viết mẫu cho CMS. Bạn có thể chỉnh sửa trong trang quản trị.</p>",
-            Tags = new() { "xu-huong", "noi-that" },
             Status = "published",
             PublishedAt = now,
             CreatedAt = now,

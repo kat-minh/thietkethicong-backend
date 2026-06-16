@@ -6,7 +6,7 @@ public record PostListItem(
 
 public record PostResponse(
     Guid Id, string Slug, string Title, string Excerpt, string CoverImage, string BodyHtml,
-    List<string> Tags, string Category, string Author, string ReadingTime,
+    string Category, string Author, string ReadingTime,
     string Status, DateTime? PublishedAt, bool Featured, DateTime CreatedAt, DateTime UpdatedAt);
 
 public class PostMutationRequest
@@ -16,7 +16,6 @@ public class PostMutationRequest
     public string Excerpt { get; set; } = string.Empty;
     public string CoverImage { get; set; } = string.Empty;
     public string BodyHtml { get; set; } = string.Empty;
-    public List<string> Tags { get; set; } = new();
     public string Category { get; set; } = string.Empty;
     public string Author { get; set; } = string.Empty;
     public string ReadingTime { get; set; } = string.Empty;

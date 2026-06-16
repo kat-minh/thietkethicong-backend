@@ -66,7 +66,6 @@ public class PostService : IPostService
         post.Excerpt = r.Excerpt;
         post.CoverImage = r.CoverImage.Trim();
         post.BodyHtml = r.BodyHtml;
-        post.Tags = r.Tags.Where(t => !string.IsNullOrWhiteSpace(t)).ToList();
         post.Category = r.Category.Trim();
         post.Author = r.Author.Trim();
         post.ReadingTime = r.ReadingTime.Trim();
@@ -82,7 +81,7 @@ public class PostService : IPostService
         new(p.Id, p.Slug, p.Title, p.Excerpt, p.Category, p.Status, p.PublishedAt, p.CoverImage, p.Featured, p.UpdatedAt);
 
     private static PostResponse ToResponse(Post p) =>
-        new(p.Id, p.Slug, p.Title, p.Excerpt, p.CoverImage, p.BodyHtml, p.Tags,
+        new(p.Id, p.Slug, p.Title, p.Excerpt, p.CoverImage, p.BodyHtml,
             p.Category, p.Author, p.ReadingTime, p.Status, p.PublishedAt, p.Featured, p.CreatedAt, p.UpdatedAt);
 }
 

@@ -19,8 +19,6 @@ public class Post
     /// <summary>Article body as HTML.</summary>
     public string BodyHtml { get; set; } = string.Empty;
 
-    public List<string> Tags { get; set; } = new();
-
     /// <summary>Marks the hero/featured article shown at the top of the blog.</summary>
     public bool Featured { get; set; }
 
