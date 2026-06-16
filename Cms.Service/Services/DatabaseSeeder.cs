@@ -29,6 +29,7 @@ public class DatabaseSeeder : IDatabaseSeeder
     private readonly ISimpleRepository<Philosophy> _philosophy;
     private readonly ISimpleRepository<Award> _awards;
     private readonly ISimpleRepository<Certification> _certifications;
+    private readonly IPageContentRepository _pageContent;
 
     public DatabaseSeeder(
         IUserRepository users,
@@ -44,7 +45,8 @@ public class DatabaseSeeder : IDatabaseSeeder
         ISimpleRepository<Partner> partners,
         ISimpleRepository<Philosophy> philosophy,
         ISimpleRepository<Award> awards,
-        ISimpleRepository<Certification> certifications)
+        ISimpleRepository<Certification> certifications,
+        IPageContentRepository pageContent)
     {
         _users = users;
         _projects = projects;
@@ -60,6 +62,7 @@ public class DatabaseSeeder : IDatabaseSeeder
         _philosophy = philosophy;
         _awards = awards;
         _certifications = certifications;
+        _pageContent = pageContent;
     }
 
     // Matches how ProjectService/ServiceItemService persist their JSON columns.
@@ -86,6 +89,41 @@ public class DatabaseSeeder : IDatabaseSeeder
         await SeedServicesAsync();
         await SeedSettingsAsync();
         await SeedStudioAsync();
+        await SeedPageContentAsync();
+    }
+
+    private async Task SeedPageContentAsync()
+    {
+        if (await _pageContent.CountAsync() > 0) return;
+        var items = new List<PageContent>
+        {
+            // —— Trang chủ ——
+            new() { Key = "home.hero.intro", Page = "Trang chủ", Label = "Hero · Đoạn giới thiệu", Kind = "textarea", SortOrder = 1,
+                Value = "Đơn vị thiết kế & thi công trọn gói tại TP.HCM, kiến tạo những không gian sống và thương mại vừa cuốn hút, vừa đáng nhớ." },
+            new() { Key = "home.hero.image", Page = "Trang chủ", Label = "Hero · Ảnh nền", Kind = "image", SortOrder = 2,
+                Value = "1600585154340-be6161a56a0c" },
+
+            // —— Giới thiệu ——
+            new() { Key = "about.hero.intro", Page = "Giới thiệu", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 1,
+                Value = "BMT Decor là một trong những đơn vị thi công được đánh giá cao tại TP.HCM bởi sự sáng tạo và những công trình chất lượng, quy mô. Chúng tôi giữ thiết kế và thi công dưới một mái nhà để ý tưởng được hiện thực hóa trọn vẹn." },
+            new() { Key = "about.story.eyebrow", Page = "Giới thiệu", Label = "Câu chuyện · Nhãn", Kind = "text", SortOrder = 2,
+                Value = "Câu chuyện của chúng tôi" },
+            new() { Key = "about.story.lead", Page = "Giới thiệu", Label = "Câu chuyện · Câu dẫn", Kind = "textarea", SortOrder = 3,
+                Value = "BMT Decor không chỉ thiết kế và thi công, chúng tôi còn đồng hành cùng thành công của bạn." },
+            new() { Key = "about.story.p1", Page = "Giới thiệu", Label = "Câu chuyện · Đoạn 1", Kind = "textarea", SortOrder = 4,
+                Value = "BMT Decor chủ động đầu tư xưởng sản xuất hơn 3.500m², chuyên sản xuất – gia công nội thất bởi đội ngũ thợ lành nghề và duyệt trực tiếp từ thiết kế. Quy trình khép kín ấy là thế mạnh thầm lặng của chúng tôi: thiết kế ra sao, thi công đúng như vậy." },
+            new() { Key = "about.story.p2", Page = "Giới thiệu", Label = "Câu chuyện · Đoạn 2", Kind = "textarea", SortOrder = 5,
+                Value = "Là đối tác tin cậy của các thương hiệu lớn — VinCom, Central Mall, Hyundai và nhiều doanh nghiệp khác. Mỗi công trình nhà ở, văn phòng, showroom, nhà hàng hay thẩm mỹ viện đều là một minh chứng cho thiết kế tinh tế và thi công chất lượng." },
+            new() { Key = "about.vision.eyebrow", Page = "Giới thiệu", Label = "Tầm nhìn · Nhãn", Kind = "text", SortOrder = 6,
+                Value = "Tầm nhìn" },
+            new() { Key = "about.vision.heading", Page = "Giới thiệu", Label = "Tầm nhìn · Tiêu đề", Kind = "textarea", SortOrder = 7,
+                Value = "Kiến tạo không gian nâng tầm trải nghiệm sống." },
+            new() { Key = "about.vision.text", Page = "Giới thiệu", Label = "Tầm nhìn · Nội dung", Kind = "textarea", SortOrder = 8,
+                Value = "Chúng tôi đo lường thành công không bằng mét vuông hay giải thưởng, mà bằng những khoảnh khắc thường ngày mà không gian tạo ra — ly cà phê sáng trong ánh sáng đẹp, bữa tối kéo dài, và căn nhà vẫn vẹn nguyên cảm xúc sau nhiều năm." },
+            new() { Key = "about.vision.image", Page = "Giới thiệu", Label = "Tầm nhìn · Ảnh", Kind = "image", SortOrder = 9,
+                Value = "1600585152220-90363fe7e115" },
+        };
+        await _pageContent.AddRangeAsync(items);
     }
 
     private async Task SeedProjectsAsync()

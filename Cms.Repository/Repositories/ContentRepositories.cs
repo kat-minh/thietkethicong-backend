@@ -72,6 +72,31 @@ public class SiteSettingRepository : ISiteSettingRepository
     }
 }
 
+public class PageContentRepository : IPageContentRepository
+{
+    private readonly AppDbContext _db;
+    public PageContentRepository(AppDbContext db) => _db = db;
+
+    public Task<List<PageContent>> GetAllAsync() =>
+        _db.PageContents.AsNoTracking().OrderBy(p => p.Page).ThenBy(p => p.SortOrder).ToListAsync();
+
+    public Task<int> CountAsync() => _db.PageContents.CountAsync();
+
+    public async Task AddRangeAsync(IEnumerable<PageContent> items)
+    {
+        await _db.PageContents.AddRangeAsync(items);
+        await _db.SaveChangesAsync();
+    }
+
+    public async Task UpdateValuesAsync(IReadOnlyDictionary<string, string> values)
+    {
+        var keys = values.Keys.ToList();
+        var rows = await _db.PageContents.Where(p => keys.Contains(p.Key)).ToListAsync();
+        foreach (var row in rows) row.Value = values[row.Key];
+        await _db.SaveChangesAsync();
+    }
+}
+
 public class ContactMessageRepository : IContactMessageRepository
 {
     private readonly AppDbContext _db;

@@ -31,6 +31,15 @@ public interface ISiteSettingRepository
     Task UpsertAsync(SiteSetting setting);
 }
 
+public interface IPageContentRepository
+{
+    Task<List<PageContent>> GetAllAsync();
+    Task<int> CountAsync();
+    Task AddRangeAsync(IEnumerable<PageContent> items);
+    /// <summary>Update only the Value of existing keys (admin can't add/remove keys).</summary>
+    Task UpdateValuesAsync(IReadOnlyDictionary<string, string> values);
+}
+
 public interface IContactMessageRepository
 {
     Task<List<ContactMessage>> GetAllAsync();

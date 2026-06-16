@@ -19,6 +19,7 @@ public static class DependencyInjection
         services.AddScoped<IServiceItemRepository, ServiceItemRepository>();
         services.AddScoped<ISiteSettingRepository, SiteSettingRepository>();
         services.AddScoped<IContactMessageRepository, ContactMessageRepository>();
+        services.AddScoped<IPageContentRepository, PageContentRepository>();
 
         // Generic CRUD for flat content entities (testimonials, team, faq, …).
         services.AddScoped(typeof(ISimpleRepository<>), typeof(SimpleRepository<>));

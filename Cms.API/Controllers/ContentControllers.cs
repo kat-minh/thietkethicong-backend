@@ -92,3 +92,30 @@ public class CertificationsController : SimpleCrudController<Certification>
 {
     public CertificationsController(ISimpleRepository<Certification> r) : base(r) { }
 }
+
+/// <summary>Editable page copy/images (key→value). GET public, bulk PUT admin.</summary>
+[ApiController]
+[Route("api/page-content")]
+public class PageContentController : ControllerBase
+{
+    private readonly IPageContentRepository _repo;
+    public PageContentController(IPageContentRepository repo) => _repo = repo;
+
+    [HttpGet]
+    [AllowAnonymous]
+    public async Task<IActionResult> GetAll() => Ok(await _repo.GetAllAsync());
+
+    public record PageContentUpdate(string Key, string Value);
+
+    [HttpPut]
+    [Authorize]
+    public async Task<IActionResult> Update([FromBody] List<PageContentUpdate> updates)
+    {
+        var dict = (updates ?? new())
+            .Where(u => !string.IsNullOrWhiteSpace(u.Key))
+            .GroupBy(u => u.Key)
+            .ToDictionary(g => g.Key, g => g.Last().Value ?? string.Empty);
+        await _repo.UpdateValuesAsync(dict);
+        return Ok(await _repo.GetAllAsync());
+    }
+}
