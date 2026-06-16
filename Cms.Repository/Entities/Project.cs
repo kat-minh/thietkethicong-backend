@@ -21,7 +21,13 @@ public class Project
     public string? Subtitle { get; set; }
     public string? Area { get; set; }
     public string? Client { get; set; }
+    /// <summary>"Công việc" shown on the detail page, e.g. "Thiết kế & Thi công".</summary>
+    public string WorkType { get; set; } = "Thiết kế & Thi công";
     public bool Featured { get; set; }
+
+    /// <summary>Optional before/after comparison images (empty = section hidden).</summary>
+    public string BeforeImage { get; set; } = string.Empty;
+    public string AfterImage { get; set; } = string.Empty;
 
     /// <summary>Gallery image URLs — stored as a Postgres text[] array.</summary>
     public List<string> Gallery { get; set; } = new();

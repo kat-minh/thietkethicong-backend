@@ -235,6 +235,9 @@ public class DatabaseSeeder : IDatabaseSeeder
                 Subtitle = p.Subtitle,
                 Area = p.Area,
                 Client = p.Client,
+                WorkType = string.IsNullOrWhiteSpace(p.WorkType) ? "Thiết kế & Thi công" : p.WorkType,
+                BeforeImage = p.BeforeImage,
+                AfterImage = p.AfterImage,
                 Featured = p.Featured,
                 Gallery = (p.Gallery ?? new()).Where(g => !string.IsNullOrWhiteSpace(g)).ToList(),
                 ContentJson = JsonSerializer.Serialize(p.Content ?? new(), StoreOpts),
@@ -379,6 +382,9 @@ public class DatabaseSeeder : IDatabaseSeeder
         public string Subtitle { get; set; } = "";
         public string Area { get; set; } = "";
         public string Client { get; set; } = "";
+        public string WorkType { get; set; } = "Thiết kế & Thi công";
+        public string BeforeImage { get; set; } = "";
+        public string AfterImage { get; set; } = "";
         public bool Featured { get; set; }
         public List<string> Gallery { get; set; } = new();
         public List<SeedBlock> Content { get; set; } = new();

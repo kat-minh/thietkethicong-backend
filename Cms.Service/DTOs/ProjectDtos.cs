@@ -35,6 +35,9 @@ public record ProjectResponse(
     string? Subtitle,
     string? Area,
     string? Client,
+    string WorkType,
+    string BeforeImage,
+    string AfterImage,
     bool Featured,
     List<string> Gallery,
     List<ContentBlock> Content,
@@ -54,6 +57,9 @@ public class ProjectMutationRequest
     public string? Subtitle { get; set; }
     public string? Area { get; set; }
     public string? Client { get; set; }
+    public string WorkType { get; set; } = "Thiết kế & Thi công";
+    public string BeforeImage { get; set; } = string.Empty;
+    public string AfterImage { get; set; } = string.Empty;
     public bool Featured { get; set; }
     public List<string> Gallery { get; set; } = new();
     public List<ContentBlock> Content { get; set; } = new();

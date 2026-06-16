@@ -87,6 +87,9 @@ public class ProjectService : IProjectService
         entity.Subtitle = r.Subtitle;
         entity.Area = r.Area;
         entity.Client = r.Client;
+        entity.WorkType = string.IsNullOrWhiteSpace(r.WorkType) ? "Thiết kế & Thi công" : r.WorkType.Trim();
+        entity.BeforeImage = r.BeforeImage?.Trim() ?? string.Empty;
+        entity.AfterImage = r.AfterImage?.Trim() ?? string.Empty;
         entity.Featured = r.Featured;
         entity.Gallery = r.Gallery.Where(g => !string.IsNullOrWhiteSpace(g)).ToList();
         entity.ContentJson = JsonSerializer.Serialize(r.Content ?? new(), JsonOpts);
@@ -106,7 +109,7 @@ public class ProjectService : IProjectService
 
         return new ProjectResponse(
             p.Id, p.Slug, p.Title, p.Category, p.Location, p.Year, p.Excerpt,
-            p.Cover, p.Hero, p.Subtitle, p.Area, p.Client, p.Featured,
+            p.Cover, p.Hero, p.Subtitle, p.Area, p.Client, p.WorkType, p.BeforeImage, p.AfterImage, p.Featured,
             p.Gallery, content, p.CreatedAt, p.UpdatedAt);
     }
 
