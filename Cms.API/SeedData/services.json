@@ -34,10 +34,79 @@
           "body": "Hoàn thiện, vệ sinh, nghiệm thu cùng khách hàng và bàn giao công trình đúng tiến độ."
         }
       ],
-      "styles": [],
-      "materials": [],
-      "packages": [],
-      "faqs": []
+      "styles": [
+        {
+          "name": "Hiện đại",
+          "note": "Đường nét tối giản, đề cao công năng và ánh sáng."
+        },
+        {
+          "name": "Tân cổ điển",
+          "note": "Sang trọng, tinh tế với phào chỉ và đối xứng."
+        },
+        {
+          "name": "Scandinavian",
+          "note": "Sáng, ấm, gần gũi thiên nhiên."
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gỗ công nghiệp An Cường",
+          "note": "Bền, chống ẩm, đa dạng màu sắc."
+        },
+        {
+          "name": "Đá thạch anh",
+          "note": "Mặt bàn bếp/quầy, chống xước, dễ vệ sinh."
+        },
+        {
+          "name": "Sơn Dulux",
+          "note": "Phủ tường an toàn, bền màu."
+        }
+      ],
+      "packages": [
+        {
+          "name": "Cơ bản",
+          "price": "Từ 3.5tr/m²",
+          "features": [
+            "Thiết kế 2D–3D",
+            "Vật tư tiêu chuẩn",
+            "Bảo hành 12 tháng"
+          ]
+        },
+        {
+          "name": "Tiêu chuẩn",
+          "price": "Từ 8tr/m²",
+          "features": [
+            "Thiết kế riêng",
+            "Nội thất gỗ công nghiệp cao cấp",
+            "Giám sát thi công",
+            "Bảo hành 24 tháng"
+          ]
+        },
+        {
+          "name": "Cao cấp",
+          "price": "Từ 13tr/m²",
+          "features": [
+            "Thiết kế may đo",
+            "Vật liệu nhập khẩu",
+            "Quản lý dự án riêng",
+            "Bảo hành 36 tháng"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Thời gian thực hiện bao lâu?",
+          "a": "Tùy quy mô, thường 4–12 tuần từ khi chốt thiết kế đến bàn giao."
+        },
+        {
+          "q": "Có báo giá trước không?",
+          "a": "Có — báo giá chi tiết theo từng hạng mục, hoàn toàn miễn phí."
+        },
+        {
+          "q": "Chính sách bảo hành thế nào?",
+          "a": "Bảo hành công trình 12–36 tháng tùy gói dịch vụ."
+        }
+      ]
     }
   },
   {
@@ -75,10 +144,79 @@
           "body": "Hoàn thiện, vệ sinh, nghiệm thu cùng khách hàng và bàn giao công trình đúng tiến độ."
         }
       ],
-      "styles": [],
-      "materials": [],
-      "packages": [],
-      "faqs": []
+      "styles": [
+        {
+          "name": "Hiện đại",
+          "note": "Đường nét tối giản, đề cao công năng và ánh sáng."
+        },
+        {
+          "name": "Tân cổ điển",
+          "note": "Sang trọng, tinh tế với phào chỉ và đối xứng."
+        },
+        {
+          "name": "Scandinavian",
+          "note": "Sáng, ấm, gần gũi thiên nhiên."
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gỗ công nghiệp An Cường",
+          "note": "Bền, chống ẩm, đa dạng màu sắc."
+        },
+        {
+          "name": "Đá thạch anh",
+          "note": "Mặt bàn bếp/quầy, chống xước, dễ vệ sinh."
+        },
+        {
+          "name": "Sơn Dulux",
+          "note": "Phủ tường an toàn, bền màu."
+        }
+      ],
+      "packages": [
+        {
+          "name": "Cơ bản",
+          "price": "Từ 3.5tr/m²",
+          "features": [
+            "Thiết kế 2D–3D",
+            "Vật tư tiêu chuẩn",
+            "Bảo hành 12 tháng"
+          ]
+        },
+        {
+          "name": "Tiêu chuẩn",
+          "price": "Từ 8tr/m²",
+          "features": [
+            "Thiết kế riêng",
+            "Nội thất gỗ công nghiệp cao cấp",
+            "Giám sát thi công",
+            "Bảo hành 24 tháng"
+          ]
+        },
+        {
+          "name": "Cao cấp",
+          "price": "Từ 13tr/m²",
+          "features": [
+            "Thiết kế may đo",
+            "Vật liệu nhập khẩu",
+            "Quản lý dự án riêng",
+            "Bảo hành 36 tháng"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Thời gian thực hiện bao lâu?",
+          "a": "Tùy quy mô, thường 4–12 tuần từ khi chốt thiết kế đến bàn giao."
+        },
+        {
+          "q": "Có báo giá trước không?",
+          "a": "Có — báo giá chi tiết theo từng hạng mục, hoàn toàn miễn phí."
+        },
+        {
+          "q": "Chính sách bảo hành thế nào?",
+          "a": "Bảo hành công trình 12–36 tháng tùy gói dịch vụ."
+        }
+      ]
     }
   },
   {
@@ -116,10 +254,79 @@
           "body": "Hoàn thiện, vệ sinh, nghiệm thu cùng khách hàng và bàn giao công trình đúng tiến độ."
         }
       ],
-      "styles": [],
-      "materials": [],
-      "packages": [],
-      "faqs": []
+      "styles": [
+        {
+          "name": "Hiện đại",
+          "note": "Đường nét tối giản, đề cao công năng và ánh sáng."
+        },
+        {
+          "name": "Tân cổ điển",
+          "note": "Sang trọng, tinh tế với phào chỉ và đối xứng."
+        },
+        {
+          "name": "Scandinavian",
+          "note": "Sáng, ấm, gần gũi thiên nhiên."
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gỗ công nghiệp An Cường",
+          "note": "Bền, chống ẩm, đa dạng màu sắc."
+        },
+        {
+          "name": "Đá thạch anh",
+          "note": "Mặt bàn bếp/quầy, chống xước, dễ vệ sinh."
+        },
+        {
+          "name": "Sơn Dulux",
+          "note": "Phủ tường an toàn, bền màu."
+        }
+      ],
+      "packages": [
+        {
+          "name": "Cơ bản",
+          "price": "Từ 3.5tr/m²",
+          "features": [
+            "Thiết kế 2D–3D",
+            "Vật tư tiêu chuẩn",
+            "Bảo hành 12 tháng"
+          ]
+        },
+        {
+          "name": "Tiêu chuẩn",
+          "price": "Từ 8tr/m²",
+          "features": [
+            "Thiết kế riêng",
+            "Nội thất gỗ công nghiệp cao cấp",
+            "Giám sát thi công",
+            "Bảo hành 24 tháng"
+          ]
+        },
+        {
+          "name": "Cao cấp",
+          "price": "Từ 13tr/m²",
+          "features": [
+            "Thiết kế may đo",
+            "Vật liệu nhập khẩu",
+            "Quản lý dự án riêng",
+            "Bảo hành 36 tháng"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Thời gian thực hiện bao lâu?",
+          "a": "Tùy quy mô, thường 4–12 tuần từ khi chốt thiết kế đến bàn giao."
+        },
+        {
+          "q": "Có báo giá trước không?",
+          "a": "Có — báo giá chi tiết theo từng hạng mục, hoàn toàn miễn phí."
+        },
+        {
+          "q": "Chính sách bảo hành thế nào?",
+          "a": "Bảo hành công trình 12–36 tháng tùy gói dịch vụ."
+        }
+      ]
     }
   },
   {
@@ -157,10 +364,79 @@
           "body": "Hoàn thiện, vệ sinh, nghiệm thu cùng khách hàng và bàn giao công trình đúng tiến độ."
         }
       ],
-      "styles": [],
-      "materials": [],
-      "packages": [],
-      "faqs": []
+      "styles": [
+        {
+          "name": "Hiện đại",
+          "note": "Đường nét tối giản, đề cao công năng và ánh sáng."
+        },
+        {
+          "name": "Tân cổ điển",
+          "note": "Sang trọng, tinh tế với phào chỉ và đối xứng."
+        },
+        {
+          "name": "Scandinavian",
+          "note": "Sáng, ấm, gần gũi thiên nhiên."
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gỗ công nghiệp An Cường",
+          "note": "Bền, chống ẩm, đa dạng màu sắc."
+        },
+        {
+          "name": "Đá thạch anh",
+          "note": "Mặt bàn bếp/quầy, chống xước, dễ vệ sinh."
+        },
+        {
+          "name": "Sơn Dulux",
+          "note": "Phủ tường an toàn, bền màu."
+        }
+      ],
+      "packages": [
+        {
+          "name": "Cơ bản",
+          "price": "Từ 3.5tr/m²",
+          "features": [
+            "Thiết kế 2D–3D",
+            "Vật tư tiêu chuẩn",
+            "Bảo hành 12 tháng"
+          ]
+        },
+        {
+          "name": "Tiêu chuẩn",
+          "price": "Từ 8tr/m²",
+          "features": [
+            "Thiết kế riêng",
+            "Nội thất gỗ công nghiệp cao cấp",
+            "Giám sát thi công",
+            "Bảo hành 24 tháng"
+          ]
+        },
+        {
+          "name": "Cao cấp",
+          "price": "Từ 13tr/m²",
+          "features": [
+            "Thiết kế may đo",
+            "Vật liệu nhập khẩu",
+            "Quản lý dự án riêng",
+            "Bảo hành 36 tháng"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Thời gian thực hiện bao lâu?",
+          "a": "Tùy quy mô, thường 4–12 tuần từ khi chốt thiết kế đến bàn giao."
+        },
+        {
+          "q": "Có báo giá trước không?",
+          "a": "Có — báo giá chi tiết theo từng hạng mục, hoàn toàn miễn phí."
+        },
+        {
+          "q": "Chính sách bảo hành thế nào?",
+          "a": "Bảo hành công trình 12–36 tháng tùy gói dịch vụ."
+        }
+      ]
     }
   },
   {
@@ -198,10 +474,79 @@
           "body": "Hoàn thiện, vệ sinh, nghiệm thu cùng khách hàng và bàn giao công trình đúng tiến độ."
         }
       ],
-      "styles": [],
-      "materials": [],
-      "packages": [],
-      "faqs": []
+      "styles": [
+        {
+          "name": "Hiện đại",
+          "note": "Đường nét tối giản, đề cao công năng và ánh sáng."
+        },
+        {
+          "name": "Tân cổ điển",
+          "note": "Sang trọng, tinh tế với phào chỉ và đối xứng."
+        },
+        {
+          "name": "Scandinavian",
+          "note": "Sáng, ấm, gần gũi thiên nhiên."
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gỗ công nghiệp An Cường",
+          "note": "Bền, chống ẩm, đa dạng màu sắc."
+        },
+        {
+          "name": "Đá thạch anh",
+          "note": "Mặt bàn bếp/quầy, chống xước, dễ vệ sinh."
+        },
+        {
+          "name": "Sơn Dulux",
+          "note": "Phủ tường an toàn, bền màu."
+        }
+      ],
+      "packages": [
+        {
+          "name": "Cơ bản",
+          "price": "Từ 3.5tr/m²",
+          "features": [
+            "Thiết kế 2D–3D",
+            "Vật tư tiêu chuẩn",
+            "Bảo hành 12 tháng"
+          ]
+        },
+        {
+          "name": "Tiêu chuẩn",
+          "price": "Từ 8tr/m²",
+          "features": [
+            "Thiết kế riêng",
+            "Nội thất gỗ công nghiệp cao cấp",
+            "Giám sát thi công",
+            "Bảo hành 24 tháng"
+          ]
+        },
+        {
+          "name": "Cao cấp",
+          "price": "Từ 13tr/m²",
+          "features": [
+            "Thiết kế may đo",
+            "Vật liệu nhập khẩu",
+            "Quản lý dự án riêng",
+            "Bảo hành 36 tháng"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Thời gian thực hiện bao lâu?",
+          "a": "Tùy quy mô, thường 4–12 tuần từ khi chốt thiết kế đến bàn giao."
+        },
+        {
+          "q": "Có báo giá trước không?",
+          "a": "Có — báo giá chi tiết theo từng hạng mục, hoàn toàn miễn phí."
+        },
+        {
+          "q": "Chính sách bảo hành thế nào?",
+          "a": "Bảo hành công trình 12–36 tháng tùy gói dịch vụ."
+        }
+      ]
     }
   },
   {
@@ -239,10 +584,79 @@
           "body": "Hoàn thiện, vệ sinh, nghiệm thu cùng khách hàng và bàn giao công trình đúng tiến độ."
         }
       ],
-      "styles": [],
-      "materials": [],
-      "packages": [],
-      "faqs": []
+      "styles": [
+        {
+          "name": "Hiện đại",
+          "note": "Đường nét tối giản, đề cao công năng và ánh sáng."
+        },
+        {
+          "name": "Tân cổ điển",
+          "note": "Sang trọng, tinh tế với phào chỉ và đối xứng."
+        },
+        {
+          "name": "Scandinavian",
+          "note": "Sáng, ấm, gần gũi thiên nhiên."
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gỗ công nghiệp An Cường",
+          "note": "Bền, chống ẩm, đa dạng màu sắc."
+        },
+        {
+          "name": "Đá thạch anh",
+          "note": "Mặt bàn bếp/quầy, chống xước, dễ vệ sinh."
+        },
+        {
+          "name": "Sơn Dulux",
+          "note": "Phủ tường an toàn, bền màu."
+        }
+      ],
+      "packages": [
+        {
+          "name": "Cơ bản",
+          "price": "Từ 3.5tr/m²",
+          "features": [
+            "Thiết kế 2D–3D",
+            "Vật tư tiêu chuẩn",
+            "Bảo hành 12 tháng"
+          ]
+        },
+        {
+          "name": "Tiêu chuẩn",
+          "price": "Từ 8tr/m²",
+          "features": [
+            "Thiết kế riêng",
+            "Nội thất gỗ công nghiệp cao cấp",
+            "Giám sát thi công",
+            "Bảo hành 24 tháng"
+          ]
+        },
+        {
+          "name": "Cao cấp",
+          "price": "Từ 13tr/m²",
+          "features": [
+            "Thiết kế may đo",
+            "Vật liệu nhập khẩu",
+            "Quản lý dự án riêng",
+            "Bảo hành 36 tháng"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Thời gian thực hiện bao lâu?",
+          "a": "Tùy quy mô, thường 4–12 tuần từ khi chốt thiết kế đến bàn giao."
+        },
+        {
+          "q": "Có báo giá trước không?",
+          "a": "Có — báo giá chi tiết theo từng hạng mục, hoàn toàn miễn phí."
+        },
+        {
+          "q": "Chính sách bảo hành thế nào?",
+          "a": "Bảo hành công trình 12–36 tháng tùy gói dịch vụ."
+        }
+      ]
     }
   },
   {
@@ -280,10 +694,79 @@
           "body": "Hoàn thiện, vệ sinh, nghiệm thu cùng khách hàng và bàn giao công trình đúng tiến độ."
         }
       ],
-      "styles": [],
-      "materials": [],
-      "packages": [],
-      "faqs": []
+      "styles": [
+        {
+          "name": "Hiện đại",
+          "note": "Đường nét tối giản, đề cao công năng và ánh sáng."
+        },
+        {
+          "name": "Tân cổ điển",
+          "note": "Sang trọng, tinh tế với phào chỉ và đối xứng."
+        },
+        {
+          "name": "Scandinavian",
+          "note": "Sáng, ấm, gần gũi thiên nhiên."
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gỗ công nghiệp An Cường",
+          "note": "Bền, chống ẩm, đa dạng màu sắc."
+        },
+        {
+          "name": "Đá thạch anh",
+          "note": "Mặt bàn bếp/quầy, chống xước, dễ vệ sinh."
+        },
+        {
+          "name": "Sơn Dulux",
+          "note": "Phủ tường an toàn, bền màu."
+        }
+      ],
+      "packages": [
+        {
+          "name": "Cơ bản",
+          "price": "Từ 3.5tr/m²",
+          "features": [
+            "Thiết kế 2D–3D",
+            "Vật tư tiêu chuẩn",
+            "Bảo hành 12 tháng"
+          ]
+        },
+        {
+          "name": "Tiêu chuẩn",
+          "price": "Từ 8tr/m²",
+          "features": [
+            "Thiết kế riêng",
+            "Nội thất gỗ công nghiệp cao cấp",
+            "Giám sát thi công",
+            "Bảo hành 24 tháng"
+          ]
+        },
+        {
+          "name": "Cao cấp",
+          "price": "Từ 13tr/m²",
+          "features": [
+            "Thiết kế may đo",
+            "Vật liệu nhập khẩu",
+            "Quản lý dự án riêng",
+            "Bảo hành 36 tháng"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Thời gian thực hiện bao lâu?",
+          "a": "Tùy quy mô, thường 4–12 tuần từ khi chốt thiết kế đến bàn giao."
+        },
+        {
+          "q": "Có báo giá trước không?",
+          "a": "Có — báo giá chi tiết theo từng hạng mục, hoàn toàn miễn phí."
+        },
+        {
+          "q": "Chính sách bảo hành thế nào?",
+          "a": "Bảo hành công trình 12–36 tháng tùy gói dịch vụ."
+        }
+      ]
     }
   },
   {
@@ -321,10 +804,79 @@
           "body": "Hoàn thiện, vệ sinh, nghiệm thu cùng khách hàng và bàn giao công trình đúng tiến độ."
         }
       ],
-      "styles": [],
-      "materials": [],
-      "packages": [],
-      "faqs": []
+      "styles": [
+        {
+          "name": "Hiện đại",
+          "note": "Đường nét tối giản, đề cao công năng và ánh sáng."
+        },
+        {
+          "name": "Tân cổ điển",
+          "note": "Sang trọng, tinh tế với phào chỉ và đối xứng."
+        },
+        {
+          "name": "Scandinavian",
+          "note": "Sáng, ấm, gần gũi thiên nhiên."
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gỗ công nghiệp An Cường",
+          "note": "Bền, chống ẩm, đa dạng màu sắc."
+        },
+        {
+          "name": "Đá thạch anh",
+          "note": "Mặt bàn bếp/quầy, chống xước, dễ vệ sinh."
+        },
+        {
+          "name": "Sơn Dulux",
+          "note": "Phủ tường an toàn, bền màu."
+        }
+      ],
+      "packages": [
+        {
+          "name": "Cơ bản",
+          "price": "Từ 3.5tr/m²",
+          "features": [
+            "Thiết kế 2D–3D",
+            "Vật tư tiêu chuẩn",
+            "Bảo hành 12 tháng"
+          ]
+        },
+        {
+          "name": "Tiêu chuẩn",
+          "price": "Từ 8tr/m²",
+          "features": [
+            "Thiết kế riêng",
+            "Nội thất gỗ công nghiệp cao cấp",
+            "Giám sát thi công",
+            "Bảo hành 24 tháng"
+          ]
+        },
+        {
+          "name": "Cao cấp",
+          "price": "Từ 13tr/m²",
+          "features": [
+            "Thiết kế may đo",
+            "Vật liệu nhập khẩu",
+            "Quản lý dự án riêng",
+            "Bảo hành 36 tháng"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Thời gian thực hiện bao lâu?",
+          "a": "Tùy quy mô, thường 4–12 tuần từ khi chốt thiết kế đến bàn giao."
+        },
+        {
+          "q": "Có báo giá trước không?",
+          "a": "Có — báo giá chi tiết theo từng hạng mục, hoàn toàn miễn phí."
+        },
+        {
+          "q": "Chính sách bảo hành thế nào?",
+          "a": "Bảo hành công trình 12–36 tháng tùy gói dịch vụ."
+        }
+      ]
     }
   }
 ]

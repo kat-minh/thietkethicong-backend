@@ -31,6 +31,8 @@ public class DatabaseSeeder : IDatabaseSeeder
     private readonly ISimpleRepository<Certification> _certifications;
     private readonly ISimpleRepository<JobPosting> _jobs;
     private readonly ISimpleRepository<Album> _albums;
+    private readonly ISimpleRepository<JobApplication> _applications;
+    private readonly IContactMessageRepository _messages;
     private readonly IPageContentRepository _pageContent;
 
     public DatabaseSeeder(
@@ -50,6 +52,8 @@ public class DatabaseSeeder : IDatabaseSeeder
         ISimpleRepository<Certification> certifications,
         ISimpleRepository<JobPosting> jobs,
         ISimpleRepository<Album> albums,
+        ISimpleRepository<JobApplication> applications,
+        IContactMessageRepository messages,
         IPageContentRepository pageContent)
     {
         _users = users;
@@ -68,6 +72,8 @@ public class DatabaseSeeder : IDatabaseSeeder
         _certifications = certifications;
         _jobs = jobs;
         _albums = albums;
+        _applications = applications;
+        _messages = messages;
         _pageContent = pageContent;
     }
 
@@ -97,7 +103,37 @@ public class DatabaseSeeder : IDatabaseSeeder
         await SeedStudioAsync();
         await SeedJobsAsync();
         await SeedAlbumsAsync();
+        await SeedMessagesAsync();
+        await SeedApplicationsAsync();
         await SeedPageContentAsync();
+    }
+
+    private async Task SeedMessagesAsync()
+    {
+        if ((await _messages.GetAllAsync()).Count > 0) return;
+        var now = DateTime.UtcNow;
+        var items = new[]
+        {
+            new ContactMessage { Id = Guid.NewGuid(), Name = "Nguyễn Văn An", Email = "an.nguyen@example.com", Phone = "0901234567", Subject = "Tư vấn thiết kế căn hộ 80m²", Message = "Chào BMT Decor, mình muốn tư vấn thiết kế nội thất căn hộ 80m² ở Quận 7, phong cách hiện đại. Mong được báo giá.", IsRead = false, CreatedAt = now.AddHours(-2) },
+            new ContactMessage { Id = Guid.NewGuid(), Name = "Trần Thị Bình", Email = "binh.tran@example.com", Phone = "0938111222", Subject = "Thi công showroom", Message = "Bên mình cần thi công showroom 150m² tại Bình Thạnh, mong được khảo sát trong tuần này.", IsRead = false, CreatedAt = now.AddDays(-1) },
+            new ContactMessage { Id = Guid.NewGuid(), Name = "Lê Hoàng Cường", Email = "cuong.le@example.com", Phone = "0977333444", Subject = "Cải tạo văn phòng", Message = "Văn phòng công ty cần cải tạo lại, diện tích khoảng 200m². Vui lòng liên hệ lại giúp mình.", IsRead = true, CreatedAt = now.AddDays(-3) },
+        };
+        foreach (var m in items) await _messages.AddAsync(m);
+    }
+
+    private async Task SeedApplicationsAsync()
+    {
+        if ((await _applications.GetAllAsync()).Count > 0) return;
+        var now = DateTime.UtcNow;
+        // Placeholder CV link (temporary, like the sample images).
+        const string cv = "https://thietkethicong.vn/wp-content/uploads/2024/08/IMG_4015.jpg";
+        var items = new[]
+        {
+            new JobApplication { Id = Guid.NewGuid(), Name = "Phạm Minh Đức", Phone = "0901555666", Email = "duc.pham@example.com", Position = "Thực Tập Sinh Marketing", CoverLetter = "Em là sinh viên năm 3 ngành Marketing, đam mê social media và đã làm cộng tác viên content. Mong được thực tập tại BMT Decor.", CvUrl = cv, IsRead = false, CreatedAt = now.AddHours(-5) },
+            new JobApplication { Id = Guid.NewGuid(), Name = "Võ Thị Em", Phone = "0912777888", Email = "em.vo@example.com", Position = "Thực Tập Sinh Thiết kế Nội/Ngoại thất", CoverLetter = "Em sử dụng tốt SketchUp, 3ds Max, AutoCAD. Gửi kèm portfolio trong CV ạ.", CvUrl = cv, IsRead = false, CreatedAt = now.AddDays(-2) },
+            new JobApplication { Id = Guid.NewGuid(), Name = "Đỗ Quốc Huy", Phone = "0933999000", Email = "huy.do@example.com", Position = "Nhân viên Kinh doanh dự án", CoverLetter = "Em có 2 năm kinh nghiệm sales nội thất, mong gia nhập đội ngũ kinh doanh của BMT.", CvUrl = cv, IsRead = true, CreatedAt = now.AddDays(-4) },
+        };
+        foreach (var a in items) await _applications.AddAsync(a);
     }
 
     private async Task SeedAlbumsAsync()
