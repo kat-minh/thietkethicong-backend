@@ -132,6 +132,10 @@ public class DatabaseSeeder : IDatabaseSeeder
             // —— Báo giá ——
             new() { Key = "estimator.hero.intro", Page = "Báo giá", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 1,
                 Value = "Bốn câu hỏi nhanh để có khoảng giá thực tế — sau đó để lại thông tin để nhận báo giá chi tiết theo từng hạng mục cho dự án của bạn." },
+            // Estimator rate tables — edited via a dedicated admin page (kind "json"
+            // is hidden from the generic page-content editor).
+            new() { Key = "estimator.config", Page = "Báo giá", Label = "Bảng đơn giá ước tính", Kind = "json", SortOrder = 2,
+                Value = @"{""propertyTypes"":[{""id"":""apartment"",""label"":""Căn hộ"",""mult"":1.0},{""id"":""townhouse"",""label"":""Nhà phố"",""mult"":1.1},{""id"":""villa"",""label"":""Biệt thự"",""mult"":1.25},{""id"":""office"",""label"":""Văn phòng"",""mult"":1.05},{""id"":""fnb"",""label"":""Café / Nhà hàng"",""mult"":1.35},{""id"":""retail"",""label"":""Showroom / Cửa hàng"",""mult"":1.2}],""packages"":[{""id"":""design"",""label"":""Chỉ thiết kế"",""rate"":350000,""blurb"":""Từ concept đến bản vẽ thi công.""},{""id"":""refresh"",""label"":""Cải tạo — Làm mới"",""rate"":3500000,""blurb"":""Nâng cấp & trang trí cơ bản.""},{""id"":""essential"",""label"":""Trọn gói — Tiêu chuẩn"",""rate"":8000000,""blurb"":""Hoàn thiện tiêu chuẩn, nội thất cơ bản.""},{""id"":""signature"",""label"":""Trọn gói — Cao cấp"",""rate"":13000000,""blurb"":""Thiết kế riêng, vật liệu cao cấp.""},{""id"":""atelier"",""label"":""Trọn gói — Đặc tuyển"",""rate"":20000000,""blurb"":""Sang trọng, may đo hoàn toàn.""}]}" },
         };
 
         var missing = items.Where(i => !existing.Contains(i.Key)).ToList();
