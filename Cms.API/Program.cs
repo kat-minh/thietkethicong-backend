@@ -1,4 +1,5 @@
 using System.Text;
+using Cms.API.Middleware;
 using Cms.Repository.Extensions;
 using Cms.Repository.Persistence;
 using Cms.Service.Extensions;
@@ -68,6 +69,7 @@ builder.Services.AddAuthorization();
 // MVC + Swagger (with Bearer support)
 // ---------------------------------------------------------------------------
 builder.Services.AddControllers();
+builder.Services.AddHttpClient(); // used by RevalidationMiddleware to ping the site
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -104,6 +106,7 @@ if (app.Environment.IsDevelopment())
 app.UseCors(CorsPolicy);
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<RevalidationMiddleware>(); // ping site to revalidate after content mutations
 app.MapControllers();
 
 app.Run();
