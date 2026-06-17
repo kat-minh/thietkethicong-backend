@@ -39,6 +39,12 @@ services:
       Jwt__Issuer: "CmsApi"
       Jwt__Audience: "CmsClient"
       Jwt__ExpiryMinutes: "120"
+      # On-demand ISR: after a content save, ping the site to refresh immediately
+      # (no-ops if unset). Values come from the gitignored .env file next to this
+      # compose file (see .env.example). Secret must match REVALIDATE_SECRET on
+      # the site. On the VPS, point the URL at the site's public address.
+      SITE_REVALIDATE_URL: "${SITE_REVALIDATE_URL:-}"
+      SITE_REVALIDATE_SECRET: "${SITE_REVALIDATE_SECRET:-}"
     ports:
       # Host 5080 -> container 8080. Your Next.js app calls http://localhost:5080
       - "5080:8080"
