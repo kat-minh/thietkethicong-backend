@@ -253,6 +253,8 @@ public class DatabaseSeeder : IDatabaseSeeder
                 Value = "Hãy chia sẻ về không gian và mong muốn của bạn. Buổi tư vấn đầu tiên luôn miễn phí — và thường là khởi đầu của một công trình đáng nhớ." },
 
             // —— Báo giá ——
+            new() { Key = "estimator.hero.eyebrow", Page = "Báo giá", Label = "Hero · Nhãn", Kind = "text", SortOrder = 10, Value = "Báo giá" },
+            new() { Key = "estimator.hero.title", Page = "Báo giá", Label = "Hero · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 11, Value = "Ngân sách,\nchỉ trong\nmột phút." },
             new() { Key = "estimator.hero.intro", Page = "Báo giá", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 1,
                 Value = "Bốn câu hỏi nhanh để có khoảng giá thực tế — sau đó để lại thông tin để nhận báo giá chi tiết theo từng hạng mục cho dự án của bạn." },
             // Estimator rate tables — edited via a dedicated admin page (kind "json"
