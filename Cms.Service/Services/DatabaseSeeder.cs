@@ -244,6 +244,9 @@ public class DatabaseSeeder : IDatabaseSeeder
             new() { Key = "about.commit.4.title", Page = "Giới thiệu", Label = "Cam kết (chi tiết) · Mục 4 — Tiêu đề", Kind = "text", SortOrder = 27, Value = "Bảo hành rõ ràng" },
             new() { Key = "about.commit.4.body", Page = "Giới thiệu", Label = "Cam kết (chi tiết) · Mục 4 — Mô tả", Kind = "textarea", SortOrder = 28,
                 Value = "Chính sách bảo hành minh bạch, đồng hành cùng khách hàng sau bàn giao. Hỗ trợ bảo trì và xử lý các vấn đề kỹ thuật nhanh chóng, kịp thời." },
+            new() { Key = "about.cta.eyebrow", Page = "Giới thiệu", Label = "Khối kêu gọi (CTA) · Nhãn", Kind = "text", SortOrder = 30, Value = "Hợp tác cùng chúng tôi" },
+            new() { Key = "about.cta.title", Page = "Giới thiệu", Label = "Khối kêu gọi (CTA) · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 31, Value = "Kể cho chúng tôi\ndự án của bạn." },
+            new() { Key = "about.cta.image", Page = "Giới thiệu", Label = "Khối kêu gọi (CTA) · Ảnh nền", Kind = "image", SortOrder = 32, Value = "1600585152220-90363fe7e115" },
 
             // —— Liên hệ ——
             new() { Key = "contact.hero.intro", Page = "Liên hệ", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 1,
