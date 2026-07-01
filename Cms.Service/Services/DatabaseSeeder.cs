@@ -206,6 +206,9 @@ public class DatabaseSeeder : IDatabaseSeeder
             new() { Key = "home.video.eyebrow", Page = "Trang chủ", Label = "Video · Nhãn", Kind = "text", SortOrder = 30, Value = "Bên trong xưởng" },
             new() { Key = "home.video.heading", Page = "Trang chủ", Label = "Video · Tiêu đề", Kind = "textarea", SortOrder = 31, Value = "Thước phim về cách một không gian thành hình." },
             new() { Key = "home.video.image", Page = "Trang chủ", Label = "Video · Ảnh nền", Kind = "image", SortOrder = 32, Value = "1600607687939-ce8a6c25118c" },
+            new() { Key = "home.process.eyebrow", Page = "Trang chủ", Label = "Quy trình (tiêu đề) · Nhãn", Kind = "text", SortOrder = 33, Value = "Quy trình làm việc" },
+            new() { Key = "home.process.heading", Page = "Trang chủ", Label = "Quy trình (tiêu đề) · Tiêu đề", Kind = "text", SortOrder = 34, Value = "Từ nét vẽ đầu tiên" },
+            new() { Key = "home.process.headingAccent", Page = "Trang chủ", Label = "Quy trình (tiêu đề) · Tiêu đề (chữ vàng)", Kind = "text", SortOrder = 35, Value = "đến ngày trao chìa khóa." },
 
             // —— Giới thiệu ——
             new() { Key = "about.hero.intro", Page = "Giới thiệu", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 1,
