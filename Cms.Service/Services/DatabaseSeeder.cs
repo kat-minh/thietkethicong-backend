@@ -211,6 +211,8 @@ public class DatabaseSeeder : IDatabaseSeeder
             new() { Key = "home.process.headingAccent", Page = "Trang chủ", Label = "Quy trình (tiêu đề) · Tiêu đề (chữ vàng)", Kind = "text", SortOrder = 35, Value = "đến ngày trao chìa khóa." },
 
             // —— Giới thiệu ——
+            new() { Key = "about.hero.eyebrow", Page = "Giới thiệu", Label = "Hero · Nhãn", Kind = "text", SortOrder = 10, Value = "Giới thiệu" },
+            new() { Key = "about.hero.title", Page = "Giới thiệu", Label = "Hero · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 11, Value = "Đơn vị thiết kế\nthi công nội thất\nchuyên nghiệp." },
             new() { Key = "about.hero.intro", Page = "Giới thiệu", Label = "Hero · Đoạn mở đầu", Kind = "textarea", SortOrder = 1,
                 Value = "BMT Decor là một trong những đơn vị thi công được đánh giá cao tại TP.HCM bởi sự sáng tạo và những công trình chất lượng, quy mô. Chúng tôi giữ thiết kế và thi công dưới một mái nhà để ý tưởng được hiện thực hóa trọn vẹn." },
             new() { Key = "about.story.eyebrow", Page = "Giới thiệu", Label = "Câu chuyện · Nhãn", Kind = "text", SortOrder = 2,
