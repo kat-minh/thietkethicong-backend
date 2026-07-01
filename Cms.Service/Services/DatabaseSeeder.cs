@@ -262,7 +262,7 @@ public class DatabaseSeeder : IDatabaseSeeder
 
             // —— Khối kêu gọi (CTA) dùng chung, hiện trong hub Trang chủ ——
             new() { Key = "cta.eyebrow", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Nhãn", Kind = "text", SortOrder = 40, Value = "Bắt đầu dự án" },
-            new() { Key = "cta.title", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 41, Value = "Cùng kiến tạo\nkhông gian\nđáng nhớ." },
+            new() { Key = "cta.title", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Tiêu đề (mỗi dòng một hàng)", Kind = "textarea", SortOrder = 41, Value = "Cùng BMT Decor kiến tạo\nkhông gian sống\nđáng nhớ" },
             new() { Key = "cta.image", Page = "Trang chủ", Label = "Khối kêu gọi (CTA) · Ảnh nền", Kind = "image", SortOrder = 42, Value = "1600585152220-90363fe7e115" },
 
             // —— Hồ sơ năng lực (trang portfolio) ——
